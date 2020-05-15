@@ -1,0 +1,87 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: aliceblue;
+}
+
+#content {
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: rgba(206, 231, 252) 0px 4px 20px;
+    position: relative;
+}
+
+input {
+    font-family: sans-serif;
+    border: unset;
+    text-align: center;
+    outline: none;
+}
+
+label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    right: 0;
+    height: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    /* padding: 3px 0px; */
+    font-family: sans-serif;
+    transition: 0.3s ease;
+    cursor: text;
+}
+
+input:focus~label {
+    color: gray;
+    transform: scale(0.8);
+    height: 20%;
+    top: 6px;
+    cursor: default;
+}
+
+#security_level {
+    background-color: #ff0000;
+    height: 5px;
+    width: 0%;
+    transition: 0.3s ease;
+}
+
+#security_level.level1 {
+    background-color: #ff0000;
+    width: 20%;
+}
+
+#security_level.level2 {
+    background-color: #ff8800;
+    width: 40%;
+}
+
+#security_level.level3 {
+    background-color: rgb(245, 188, 2);
+    width: 60%;
+}
+
+#security_level.level4 {
+    background-color: #c9ed00;
+    width: 80%;
+}
+
+#security_level.level5 {
+    background-color: #00ff00;
+    width: 100%;
+}
