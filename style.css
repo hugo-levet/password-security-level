@@ -62,6 +62,8 @@ input:focus~label, input.notEmpty~label {
     position: relative;
     display: flex;
     align-items: center;
+    border-radius: 5px;
+    top: 5px;
 }
 
 #security_level.level1 {
