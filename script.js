@@ -4,6 +4,11 @@
         $('#password').bind('keyup', function () {
             let securityLevel = 0;
             let password = $(this).val();
+            if(password.length != 0){
+                $(this).addClass('notEmpty');
+            }else{
+                $(this).removeClass('notEmpty');
+            }
 
             // 1 lower char
             let lowerRegex = /[a-z]/g;
@@ -30,7 +35,6 @@
                 securityLevel += 1;
             }
 
-            // $('#security_level').html('security : ' + securityLevel);
             // change security level
             $('#security_level').attr('class', 'level' + securityLevel);
         });
